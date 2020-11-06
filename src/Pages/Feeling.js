@@ -30,7 +30,15 @@ class Feeling extends Component {
         </div>
 
         <div>
-          <input type="number" min="0" max="5" onChange={this.onInputChange} />
+          <label>
+            Rate on a scale of 1-5
+            <input
+              type="number"
+              min="1"
+              max="5"
+              onChange={this.onInputChange}
+            />
+          </label>
           <button onClick={this.onButtonClick}>Next</button>
         </div>
       </div>
