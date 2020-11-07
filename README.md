@@ -17,4 +17,4 @@ This is a form that will submit feedback to a database. The app will ask a serie
 
 ## Acknowledgement
 
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me make this application a reality.
+Thanks to Prime Digital Academy who equipped and helped me make this application a reality.
