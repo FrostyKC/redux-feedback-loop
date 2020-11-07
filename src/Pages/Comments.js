@@ -7,7 +7,10 @@ class Comments extends Component {
   };
 
   onButtonClick = (event) => {
-    this.props.dispatch({ type: 'UPDATE_COMMENTS', payload: this.state });
+    this.props.dispatch({
+      type: 'UPDATE_COMMENTS',
+      payload: this.state.comments,
+    });
     this.props.history.push('/review');
   };
 

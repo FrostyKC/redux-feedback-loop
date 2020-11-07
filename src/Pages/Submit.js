@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Submit extends Component {
+  onButtonClick = () => {
+    this.props.dispatch({
+      type: 'CLEAR_FEEDBACK',
+    });
+    this.props.history.push('/');
+  };
+
   render() {
     return (
       <div>

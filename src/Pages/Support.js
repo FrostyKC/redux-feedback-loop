@@ -8,7 +8,10 @@ class Support extends Component {
 
   onButtonClick = (event) => {
     if (this.state.support) {
-      this.props.dispatch({ type: 'UPDATE_SUPPORT', payload: this.state });
+      this.props.dispatch({
+        type: 'UPDATE_SUPPORT',
+        payload: this.state.support,
+      });
       this.props.history.push('/comments');
     } else {
       alert('Please enter a value 1-5.');

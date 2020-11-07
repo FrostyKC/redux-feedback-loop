@@ -3,17 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Review extends Component {
-  state = {
-    feedback: {
-      feeling: this.props.store.feelingReducer.feeling,
-      understanding: this.props.store.understandingReducer.understanding,
-      support: this.props.store.supportReducer.support,
-      comments: this.props.store.commentReducer.comments,
-    },
-  };
-
   onSubmitClick = (event) => {
-    let newFeedback = this.state.feedback;
+    let newFeedback = this.props.store.feedbackReducer;
     this.saveNewFeedback(newFeedback);
     this.props.history.push('/submit');
   };
@@ -35,10 +26,10 @@ class Review extends Component {
         </div>
 
         <div>
-          <p>Feelings: {this.state.feedback.feeling}</p>
-          <p>Understanding: {this.state.feedback.understanding}</p>
-          <p>Support: {this.state.feedback.support}</p>
-          <p>Comments: {this.state.feedback.comments}</p>
+          <p>Feelings: {this.props.store.feedbackReducer.feeling}</p>
+          <p>Understanding: {this.props.store.feedbackReducer.understanding}</p>
+          <p>Support: {this.props.store.feedbackReducer.support}</p>
+          <p>Comments: {this.props.store.feedbackReducer.comments}</p>
         </div>
 
         <div>

@@ -10,7 +10,7 @@ class Understanding extends Component {
     if (this.state.understanding) {
       this.props.dispatch({
         type: 'UPDATE_UNDERSTANDING',
-        payload: this.state,
+        payload: this.state.understanding,
       });
       this.props.history.push('/support');
     } else {
