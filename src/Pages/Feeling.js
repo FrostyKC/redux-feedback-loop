@@ -7,8 +7,12 @@ class Feeling extends Component {
   };
 
   onButtonClick = (event) => {
-    this.props.dispatch({ type: 'UPDATE_FEELING', payload: this.state });
-    this.props.history.push('/understanding');
+    if (this.state.feeling) {
+      this.props.dispatch({ type: 'UPDATE_FEELING', payload: this.state });
+      this.props.history.push('/understanding');
+    } else {
+      alert('Please enter a value 1-5.');
+    }
   };
 
   onInputChange = (event) => {

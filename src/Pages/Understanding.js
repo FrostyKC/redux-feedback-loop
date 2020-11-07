@@ -7,8 +7,15 @@ class Understanding extends Component {
   };
 
   onButtonClick = (event) => {
-    this.props.dispatch({ type: 'UPDATE_UNDERSTANDING', payload: this.state });
-    this.props.history.push('/support');
+    if (this.state.understanding) {
+      this.props.dispatch({
+        type: 'UPDATE_UNDERSTANDING',
+        payload: this.state,
+      });
+      this.props.history.push('/support');
+    } else {
+      alert('Please enter a value 1-5.');
+    }
   };
 
   onInputChange = (event) => {

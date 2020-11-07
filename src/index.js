@@ -24,10 +24,19 @@ const understandingReducer = (state = '', action) => {
   }
 };
 
+const supportReducer = (state = '', action) => {
+  if (action.type === 'UPDATE_SUPPORT') {
+    return action.payload;
+  } else {
+    return state;
+  }
+};
+
 const storeInstance = createStore(
   combineReducers({
     feelingReducer,
     understandingReducer,
+    supportReducer,
   }),
   applyMiddleware(logger)
 );
